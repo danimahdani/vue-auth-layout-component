@@ -39,9 +39,7 @@ const timeStamp = useDate()
         detail: `Welcome, ${form.username}`,
         life: 3000
       })
-      setInterval(() => {
-        router.push('/account');
-      }, 1500);
+      await router.push('/account');
     } else {
       // Handle invalid credentials
       console.log('Invalid credentials');

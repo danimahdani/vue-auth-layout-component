@@ -1,6 +1,5 @@
 <template>
   <div class="card flex justify-center">
-    <Toast />
     <Form
       v-slot="$form"
       :initial-values="initialValues"
