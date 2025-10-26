@@ -1,0 +1,36 @@
+{
+    "files": [],
+    // "references": [
+    //     { "path": "./tsconfig.app.json" },
+    //     { "path": "./tsconfig.node.json" }
+    // ],
+    // "include": [
+    //     // ...,
+    //     "./typed-router.d.ts"
+    // ],
+    "include": ["src/**/*", "src/**/*.vue", "global.d.ts"],
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "lib": ["esnext", "dom"],
+        "allowJs": true,
+        "strict": true,
+        "noEmit": true,
+        "skipLibCheck": true,
+        "types": [
+            "vite/client",
+            "vite-plugin-vue-layouts/client",
+            "unplugin-vue-router/client"
+        ],
+        "baseUrl": ".",
+        "ignoreDeprecations": "6.0",
+        "paths": {
+            "@/*": ["src/*"],
+            "@components/*": ["src/components/*"],
+            "@composables/*": ["src/composables/*"]
+        }
+    },
+    "exclude": ["dist", "node_modules", "cypress"],
+    "references": [{ "path": "./tsconfig.node.json" }]
+}
